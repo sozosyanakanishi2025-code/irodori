@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>書籍一覧</title>
+</head>
+<body>
+    <h1>書籍一覧</h1>
+
+    <table border="1">
+        <tr>
+            <th>ISBN</th>
+            <th>書籍名</th>
+            <th>著者</th>
+            <th>出版社</th>
+            <th>出版日</th>
+            <th>価格</th>
+        </tr>
+
+        {% for book in books %}
+        <tr>
+            <td>{{ book.ISBN }}</td>
+            <td>{{ book.書籍名 }}</td>
+            <td>{{ book.著者 }}</td>
+            <td>{{ book.出版社 }}</td>
+            <td>{{ book.出版日 }}</td>
+            <td>{{ book.価格 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
